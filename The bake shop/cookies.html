@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">    
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+#myInput {
+  background-image: url('css/search.png');
+  background-position: 12px 5px;
+  background-repeat: no-repeat;
+  width: 100%;
+  font-size: 14px;
+  padding: 7px 10px 6px 40px;
+  border: 1px solid rgb(7, 218, 7);
+  margin-bottom: 12px;
+}
+
+#myUL {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd;
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+
+    <div class="header-middle"><!--header-middle-->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-4">
+                    <div class="logo pull-left">
+                        <a href="#"><img src="images/shop/logo.png" alt="" /></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+<br>
+<br>
+<div class="header-middle"><!--header-middle-->
+  <div class="container">
+      <div class="row">
+          <div class="col-sm-4">
+              <div class="logo pull-left">
+                  <a href="#"><img src="images/shop/logo2.png" alt="" /></a>
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+</div>	
+        <hr>
+        <br>
+        <div id="myBtnContainer">
+            <button class="btn active" "> <a href="main.html" class="btn">All</a></button>
+            <button class="btn active" "> <a href="cakes.html" class="btn">Cakes</a></button>
+            <button class="btn active" "> <a href="cookies.html" class="btn">Cookies</a></button>
+            
+         </div>   		
+
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+
+<ul id="myUL">
+  
+  <li>
+
+    <div class="col-sm-4">
+        <div class="product-image-wrapper">
+          <div class="single-products">
+            <div class="productinfo text-center">
+              <img src="images/shop/product7.jpg" alt="Pizza" >
+              <h1>$3</h1>
+              <a href="#">strawberry cookie</a>
+          </div>
+          <div class="product-overlay">
+            <div class="overlay-content">
+                <h1>$3</h1>
+                <a href="#">strawberry cookie</a>
+                
+            </div>
+        </div>
+        </div>
+</li>
+ 
+<li>
+    <div class="col-sm-4">
+        <div class="product-image-wrapper">
+          <div class="single-products">
+            <div class="productinfo text-center">
+              <img src="images/shop/pr1.jpg" alt="Pizza" >
+              <h1>$3</h1>
+              <a href="#">baked</a>
+            </div>
+            <div class="product-overlay">
+              <div class="overlay-content">
+                <h1>$3</h1>
+                  <a href="#">Baked</a>
+              </div>
+          </div>
+          </div>
+</li>
+<li>
+    <div class="col-sm-4">
+        <div class="product-image-wrapper">
+          <div class="single-products">
+            <div class="productinfo text-center">
+              <img src="images/shop/pr2.jpg" alt="Pizza" >
+              <h1>$2</h1>
+              <a href="#">chocolate cookie</a>
+            </div>
+            <div class="product-overlay">
+              <div class="overlay-content">
+                  <h1>$2</h1>
+                  <a href="#">chocolate cookie</a>
+              </div>
+          </div>
+          </div>
+
+
+
+</li>
+
+
+
+</ul>
+
+<script>
+function myFunction() {
+  console.clear();
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toLowerCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.startsWith(filter)) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+
+</body>
+</html>
